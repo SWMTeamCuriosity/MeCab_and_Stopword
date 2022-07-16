@@ -1,0 +1,1 @@
+# MeCab_and_Stopword
