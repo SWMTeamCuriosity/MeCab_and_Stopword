@@ -1,8 +1,7 @@
-from cgi import print_arguments
 import os
 import sys
+from cgi import print_arguments
 from konlpy.tag import Mecab
-import json
 
 
 #불용어 리스트
@@ -38,12 +37,12 @@ def get_document(fileDir): # 파일 읽기
 
 
 
-data = get_document("/Users/minyoung/Downloads/KsponSpeech_02/")
+data = get_document("your address") # 파일 읽기
 print("데이터 전처리 완료")
 print("데이터 총 개수는 "+str(len(data))+"개 입니다.")
 
 
 for i in range(len(data)): #파일 쓰기
     arr = []
-    with open("/Users/minyoung/Downloads/txt/no{}".format(i+8)+".txt",'w',encoding='utf-8') as file:
+    with open("your address/no{}".format(i+8)+".txt",'w',encoding='utf-8') as file:
         file.write(data[i])
